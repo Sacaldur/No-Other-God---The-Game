@@ -109,6 +109,16 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void StorageEntered(Storage storage)
+    {
+        if(storage.team == this.team && this.carriedIdol)
+        {
+            Idol idol = this.carriedIdol;
+            this.carriedIdol = null;
+            storage.StoreIdol(idol);
+        }
+    }
+
     private void PlaySound(AudioClip sound)
     {
         if (sound)
