@@ -3,9 +3,20 @@ using System.Collections;
 
 public class Idol : MonoBehaviour
 {
-    public bool isCarried = false;
+    private bool _isCarried = false;
+    public bool isCarried
+    {
+        get
+        {
+            return this._isCarried;
+        }
+        set
+        {
+            this._isCarried = value;
+        }
+    }
 
-    
+
     void Start()
     {
 
