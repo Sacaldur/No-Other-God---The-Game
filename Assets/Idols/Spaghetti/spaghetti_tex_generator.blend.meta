@@ -1,61 +1,49 @@
 fileFormatVersion: 2
-guid: fff7f5987f65e0147a2b75276fd182e6
-timeCreated: 1445700997
+guid: 8d25a30d4d2d4124eb76d66d34be2e51
+timeCreated: 1445709393
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: playermodel
-    100004: Armature
-    100006: Bone
-    100008: Bone_001
-    100010: Bone_002
-    100012: Bone_003
-    100014: Bone_004
-    100016: Bone_005
-    100018: Bone_006
-    100020: Bone_007
-    100022: Bone_008
-    100024: Bone_009
-    100026: Bone_010
-    100028: Bone_011
-    100030: Bone_012
-    100032: Bone_013
-    100034: Bone_014
-    100036: Bone_015
-    100038: Bone_016
-    100040: Bone_017
-    100042: player
-    400000: //RootNode
-    400002: playermodel
-    400004: Armature
-    400006: Bone
-    400008: Bone_001
-    400010: Bone_002
-    400012: Bone_003
-    400014: Bone_004
-    400016: Bone_005
-    400018: Bone_006
-    400020: Bone_007
-    400022: Bone_008
-    400024: Bone_009
-    400026: Bone_010
-    400028: Bone_011
-    400030: Bone_012
-    400032: Bone_013
-    400034: Bone_014
-    400036: Bone_015
-    400038: Bone_016
-    400040: Bone_017
-    400042: player
-    2300000: playermodel
-    3300000: playermodel
-    4300000: playermodel
+    100000: BezierCircle
+    100002: Cube
+    100004: Cube_001
+    100006: Cube_002
+    100008: NurbsPath
+    100010: NurbsPath_001
+    100012: NurbsPath_002
+    100014: //RootNode
+    400000: BezierCircle
+    400002: Cube
+    400004: Cube_001
+    400006: Cube_002
+    400008: NurbsPath
+    400010: NurbsPath_001
+    400012: NurbsPath_002
+    400014: //RootNode
+    2300000: BezierCircle
+    2300002: Cube
+    2300004: Cube_001
+    2300006: Cube_002
+    2300008: NurbsPath
+    2300010: NurbsPath_001
+    2300012: NurbsPath_002
+    3300000: BezierCircle
+    3300002: Cube
+    3300004: Cube_001
+    3300006: Cube_002
+    3300008: NurbsPath
+    3300010: NurbsPath_001
+    3300012: NurbsPath_002
+    4300000: BezierCircle
+    4300002: NurbsPath_002
+    4300004: NurbsPath_001
+    4300006: NurbsPath
+    4300008: Cube_002
+    4300010: Cube_001
+    4300012: Cube
     7400000: Default Take
-    7400002: ArmatureAction
     9500000: //RootNode
-    13700000: playermodel
   materials:
     importMaterials: 1
     materialName: 0
