@@ -1015,7 +1015,7 @@ MonoBehaviour:
     propabilityFactor: 1
   - prefab: {fileID: 190180, guid: 163cc8ad55a1cf846bd4a971bbdcec35, type: 2}
     propabilityFactor: 4
-  idolSpawnDelay: 3
+  idolSpawnDelay: 7.5
   nextIdolSpawn: 0
 --- !u!4 &1560428181
 Transform:
