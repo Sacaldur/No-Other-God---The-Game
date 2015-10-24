@@ -30,10 +30,13 @@ public class Idol : MonoBehaviour
 
     public void TriggerEntered(Collider2D collider)
     {
-        Player player = collider.GetComponent<Player>();
-        if(player)
+        if (!this.isCarried)
         {
-            player.IdolTouched(this);
+            Player player = collider.GetComponent<Player>();
+            if (player)
+            {
+                player.IdolTouched(this);
+            }
         }
     }
 }
