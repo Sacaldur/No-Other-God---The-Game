@@ -45,7 +45,7 @@ GameObject:
   - 114: {fileID: 11430278}
   - 58: {fileID: 5881832}
   m_Layer: 10
-  m_Name: Idol
+  m_Name: _Idol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -157,7 +157,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c45cc955d3d3a2b46a8509940bcf6eef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isCarried: 0
 --- !u!114 &11499318
 MonoBehaviour:
   m_ObjectHideFlags: 1

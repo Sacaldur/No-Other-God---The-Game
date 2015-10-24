@@ -13,6 +13,16 @@ public class Player : MonoBehaviour
     [Tooltip("The players id, starting at 0.\nIs used to determine the players input axes.")]
     private int playerId = 0;
     [SerializeField]
+    private int _team = 0;
+    public int team
+    {
+        get
+        {
+            return this._team;
+        }
+    }
+
+    [SerializeField]
     private float movementSpeed = 5;
 
     public Idol carriedIdol
