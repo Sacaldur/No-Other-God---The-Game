@@ -66,6 +66,18 @@ public class Player : MonoBehaviour
         Vector2 movementInput = this.GetMovementInput();
 
         this.rigidbody.velocity = movementInput * this.movementSpeed;
+
+        if(movementInput.sqrMagnitude >= 0.0625 * 0.0625)
+        {
+            Vector3 rotation = this.transform.eulerAngles;
+            float angle = Vector2.Angle(Vector2.up, movementInput);
+            if(Vector2.Dot(Vector2.right, movementInput) > 0)
+            {
+                angle = -angle;
+            }
+            rotation.z = angle;
+            this.transform.eulerAngles = rotation;
+        }
     }
 
     private Vector2 GetMovementInput()
