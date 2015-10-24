@@ -6,10 +6,36 @@ public class Player : MonoBehaviour
 {
     new private Rigidbody2D rigidbody;
     [SerializeField]
+    private Transform idolParent;
+
+    [SerializeField]
     [Tooltip("The players id, starting at 0.\nIs used to determine the players input axes.")]
     private int playerId = 0;
     [SerializeField]
     private float movementSpeed = 5;
+
+    private Idol carriedIdol
+    {
+        get
+        {
+            return this._carriedIdol;
+        }
+        set
+        {
+            if(this._carriedIdol)
+            {
+                this._carriedIdol.transform.parent = null;
+                this._carriedIdol.transform.position = this.transform.position;
+                this._carriedIdol.isCarried = false;
+            }
+
+            this._carriedIdol = value;
+            this._carriedIdol.isCarried = true;
+            this._carriedIdol.transform.parent = this.idolParent;
+            this._carriedIdol.transform.position = Vector3.zero;
+        }
+    }
+    private Idol _carriedIdol;
 
 
     void Awake()
@@ -32,5 +58,14 @@ public class Player : MonoBehaviour
     private Vector2 GetMovementInput()
     {
         return new Vector2(Input.GetAxis("Horizontal" + this.playerId), Input.GetAxis("Vertical" + this.playerId));
+    }
+
+
+    public void IdolTouched(Idol idol)
+    {
+        if(!this.carriedIdol)
+        {
+            this.carriedIdol = idol;
+        }
     }
 }
