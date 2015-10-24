@@ -32,7 +32,7 @@ public class Player : MonoBehaviour
             this._carriedIdol = value;
             this._carriedIdol.isCarried = true;
             this._carriedIdol.transform.parent = this.idolParent;
-            this._carriedIdol.transform.position = Vector3.zero;
+            this._carriedIdol.transform.localPosition = Vector3.zero;
         }
     }
     private Idol _carriedIdol;
