@@ -188,7 +188,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!1001 &1581159478
 Prefab:
   m_ObjectHideFlags: 0
@@ -198,7 +198,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 416086, guid: 57226a2d6556ef042ad40aaaa1bd94ba, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -7
       objectReference: {fileID: 0}
     - target: {fileID: 416086, guid: 57226a2d6556ef042ad40aaaa1bd94ba, type: 2}
       propertyPath: m_LocalPosition.y
