@@ -77,6 +77,7 @@ public class Player : MonoBehaviour
             }
             rotation.z = angle;
             this.transform.eulerAngles = rotation;
+            this.idolParent.localEulerAngles = new Vector3(0, 0, -angle);
         }
     }
 
