@@ -233,7 +233,7 @@ MonoBehaviour:
   playerId: 0
   _team: 0
   movementSpeed: 5
-  idolGrabSound: {fileID: 8300000, guid: 114838ff15e8349498de57f8c3ca2913, type: 3}
+  idolGrabSound: {fileID: 8300000, guid: 12cc35bd7a12a6e4ea5917af8d27ff3b, type: 3}
   idolDropSound: {fileID: 0}
   idolStoreSound: {fileID: 0}
   gotPunishedSound: {fileID: 0}
@@ -259,7 +259,7 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: idolGrabSound
       value: 
-      objectReference: {fileID: 8300000, guid: 114838ff15e8349498de57f8c3ca2913, type: 3}
+      objectReference: {fileID: 8300000, guid: 12cc35bd7a12a6e4ea5917af8d27ff3b, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 133186}

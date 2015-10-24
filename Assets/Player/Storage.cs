@@ -14,6 +14,9 @@ public class Storage : MonoBehaviour
         }
     }
 
+    [SerializeField]
+    private AudioClip idolStoredSound;
+
     private List<Idol> storedIdols = new List<Idol>();
 
 
@@ -42,5 +45,7 @@ public class Storage : MonoBehaviour
         this.storedIdols.Add(idol);
         idol.isStored = true;
         idol.transform.position = this.transform.position + new Vector3(0,0,-2);
+
+        this.GetComponent<AudioSource>().PlayOneShot(this.idolStoredSound);
     }
 }
