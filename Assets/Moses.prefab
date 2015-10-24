@@ -1,5 +1,22 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &115852
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 421212}
+  - 60: {fileID: 6098340}
+  - 114: {fileID: 11492318}
+  m_Layer: 12
+  m_Name: Vision
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &136716
 GameObject:
   m_ObjectHideFlags: 0
@@ -27,6 +44,7 @@ GameObject:
   - 4: {fileID: 494800}
   - 58: {fileID: 5825170}
   - 50: {fileID: 5027282}
+  - 114: {fileID: 11484082}
   m_Layer: 9
   m_Name: Moses
   m_TagString: Untagged
@@ -34,6 +52,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &421212
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 115852}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 494800}
+  m_RootOrder: 1
 --- !u!4 &439092
 Transform:
   m_ObjectHideFlags: 1
@@ -57,6 +87,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 439092}
+  - {fileID: 421212}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!23 &2300254
@@ -69,7 +100,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5ba4fdf204d65e240ba82705d7b52c7c, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -119,6 +150,48 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: .5
+--- !u!60 &6098340
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 115852}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 0}
+      - {x: -.75, y: 1.75}
+      - {x: -.5, y: 2}
+      - {x: 0, y: 2.20000005}
+      - {x: .5, y: 2}
+      - {x: .75, y: 1.75}
+--- !u!114 &11484082
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 146032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d30f1ae879117f745bffda9d365aa81b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11492318
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 115852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fafee2684472944c8322c4eb57a4271, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moses: {fileID: 11484082}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
