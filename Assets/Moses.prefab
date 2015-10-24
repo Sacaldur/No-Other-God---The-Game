@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 439092}
   - 33: {fileID: 3371560}
   - 23: {fileID: 2300254}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ GameObject:
   - 4: {fileID: 494800}
   - 58: {fileID: 5825170}
   - 50: {fileID: 5027282}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Moses
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129,6 +129,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Constraints
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
