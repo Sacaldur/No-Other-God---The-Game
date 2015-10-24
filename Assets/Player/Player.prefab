@@ -231,8 +231,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   idolParent: {fileID: 432762}
   playerId: 0
+  _team: 0
   movementSpeed: 5
-  idolGrabSound: {fileID: 0}
+  idolGrabSound: {fileID: 8300000, guid: 114838ff15e8349498de57f8c3ca2913, type: 3}
   idolDropSound: {fileID: 0}
   idolStoreSound: {fileID: 0}
   gotPunishedSound: {fileID: 0}
@@ -255,6 +256,10 @@ Prefab:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: idolGrabSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 114838ff15e8349498de57f8c3ca2913, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 133186}
