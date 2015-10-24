@@ -15,13 +15,13 @@ public class Player : MonoBehaviour
     [SerializeField]
     private float movementSpeed = 5;
 
-    private Idol carriedIdol
+    public Idol carriedIdol
     {
         get
         {
             return this._carriedIdol;
         }
-        set
+        private set
         {
             if(this._carriedIdol)
             {
@@ -31,9 +31,12 @@ public class Player : MonoBehaviour
             }
 
             this._carriedIdol = value;
-            this._carriedIdol.isCarried = true;
-            this._carriedIdol.transform.parent = this.idolParent;
-            this._carriedIdol.transform.localPosition = Vector3.zero;
+            if (this._carriedIdol)
+            {
+                this._carriedIdol.isCarried = true;
+                this._carriedIdol.transform.parent = this.idolParent;
+                this._carriedIdol.transform.localPosition = Vector3.zero;
+            }
         }
     }
     private Idol _carriedIdol;
@@ -77,6 +80,7 @@ public class Player : MonoBehaviour
             }
             rotation.z = angle;
             this.transform.eulerAngles = rotation;
+            this.idolParent.localEulerAngles = new Vector3(0, 0, -angle);
         }
     }
 
@@ -104,5 +108,15 @@ public class Player : MonoBehaviour
                 this.audioSource.PlayOneShot(sound);
             }
         }
+    }
+
+
+    public void PunishForCarrying()
+    {
+        Idol idol = this.carriedIdol;
+        this.carriedIdol = null;
+        Object.Destroy(idol.gameObject);
+
+        Debug.Log("TODO: implement player punishment");
     }
 }
