@@ -5,6 +5,7 @@ using System.Collections;
 public class Player : MonoBehaviour
 {
     new private Rigidbody2D rigidbody;
+    private AudioSource audioSource;
     [SerializeField]
     private Transform idolParent;
 
@@ -38,9 +39,21 @@ public class Player : MonoBehaviour
     private Idol _carriedIdol;
 
 
+    [SerializeField]
+    private AudioClip idolGrabSound;
+    [SerializeField]
+    private AudioClip idolDropSound;
+    [SerializeField]
+    private AudioClip idolStoreSound;
+    [SerializeField]
+    private AudioClip gotPunishedSound;
+
+
+
     void Awake()
     {
         this.rigidbody = this.GetComponent<Rigidbody2D>();
+        this.audioSource = this.GetComponent<AudioSource>();
     }
 
     void Start()
@@ -66,6 +79,18 @@ public class Player : MonoBehaviour
         if(!this.carriedIdol)
         {
             this.carriedIdol = idol;
+            this.PlaySound(this.idolGrabSound);
+        }
+    }
+
+    private void PlaySound(AudioClip sound)
+    {
+        if (sound)
+        {
+            if (this.audioSource)
+            {
+                this.audioSource.PlayOneShot(sound);
+            }
         }
     }
 }

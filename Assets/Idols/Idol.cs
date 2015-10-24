@@ -3,9 +3,20 @@ using System.Collections;
 
 public class Idol : MonoBehaviour
 {
-    public bool isCarried = false;
+    private bool _isCarried = false;
+    public bool isCarried
+    {
+        get
+        {
+            return this._isCarried;
+        }
+        set
+        {
+            this._isCarried = value;
+        }
+    }
 
-    
+
     void Start()
     {
 
@@ -19,10 +30,13 @@ public class Idol : MonoBehaviour
 
     public void TriggerEntered(Collider2D collider)
     {
-        Player player = collider.GetComponent<Player>();
-        if(player)
+        if (!this.isCarried)
         {
-            player.IdolTouched(this);
+            Player player = collider.GetComponent<Player>();
+            if (player)
+            {
+                player.IdolTouched(this);
+            }
         }
     }
 }
